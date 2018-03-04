@@ -13,7 +13,12 @@
     <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
-  <title>{Title}</title>
+  <link rel="shortcut icon" href="{Favicon}">
+  <link rel="alternate" type="application/rss+xml" href="{RSS}">
+  {block:Description}
+    <meta name="description" content="{MetaDescription}" />
+  {/block:Description}
+  <title>{Title}</title>  
 
   <!-- Custom CSS -->
   <style>
@@ -47,6 +52,13 @@
       box-shadow: none;
       background-color: #243140;
       color: #f0f0f0;
+    }
+    .card-title>a{
+      color: #1f8dd6;
+    }
+    .card-title>a:hover{
+      text-decoration: none;
+      color: #ffb535;
     }
   </style>
 </head>
@@ -100,29 +112,31 @@
 
   <!-- Page Content -->
   <div class="container">
-    <div class="row my-4">
+    <div class="row">
 
       <!-- Blog entries column" -->
       <div class="col-md-8">
       
         <!-- Blog Post -->
-        <div class="card mb-4">
+        {block:Posts}
+        {block:Text}
+        <div class="card mb-4 my-4">
           <div class="card-body">
-            <h2 class="card-title">Título do post</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta,
-              a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!
-            </p>
-            <a href="#" class="btn btn-primary">Continue lendo</a>
+            {block:Title}<h2 class="card-title"><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+            <p class="card-text">{Body}</p>
           </div>
           <div class="card-footer text-muted">
             01/01/2018 por
             <a href="#">Marcio Motta</a>
           </div>
         </div>
+        {/block:Text}
+        {/block:Posts}
+
       </div>
 
       <!-- Sidebar widgets column -->
-      <div class="col-md-4">
+      <div class="col-md-4 my-4">
 
         <!-- Search widget -->
         <div class="card">
