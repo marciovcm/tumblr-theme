@@ -2,200 +2,205 @@
 <html lang="{block:PortugueseBR}pt-br{/block:PortugueseBR}">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
 
     <!-- Google Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
-  <link rel="shortcut icon" href="{Favicon}">
-  <link rel="alternate" type="application/rss+xml" href="{RSS}">
-  {block:Description}
+    <!-- FontAwesome CSS -->
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    {block:Description}
     <meta name="description" content="{MetaDescription}" />
-  {/block:Description}
-  <title>{Title}</title>  
+    {/block:Description}
+    <title>{Title}</title>
 
-  <!-- Custom CSS -->
-  <style>
-    body {
-      font-family: 'Lato', sans-serif;
-      background-color: #2d3e50;
-    }
-    .navbar {
-      background-color: #2d3e50!important;
-    }
-    .navbar-brand:hover {
-      color: #1f8dd6!important;
-    }
-    .navbar-nav {
-      padding-right: 16px;
-    }
-    .nav-link:hover {
-      color: #ffb535!important;
-    }
-    .dropdown-item:hover{
-      color: #1f8dd6;
-    }
-    #search-form-header{
-      border-radius: 20px;
-      background-color: #243140;
-      border: 0;
-      padding-left: 16px;
-      color: #f0f0f0;
-    }
-    #search-form-header:focus {
-      box-shadow: none;
-      background-color: #243140;
-      color: #f0f0f0;
-    }
-    .card-title > a{
-      color: #1f8dd6;
-    }
-    .card-title > a:hover{
-      text-decoration: none;
-      color: #ffb535;
-    }
-    .list-unstyled > li{
-        display: inline-block;
-        margin: 2px;
-    }
-    .list-unstyled > li > a{
-        padding: 4px;
-        background-color: #1f8dd6;
-        color: #ffffff;
-        border-radius: 4px;
-        font-size: 12px;
-    }
-    .list-unstyled > li > a:hover{
-        text-decoration: none;
-        background-color: #ffb535;
-    }
-  </style>
+    <!-- Custom CSS -->
+    <style>
+    body { font-family: 'Lato', sans-serif; background-color: #2d3e50; }
+    .navbar { background-color: #2d3e50!important; }
+    .navbar-brand:hover { color: #1f8dd6!important; }
+    .navbar-nav { padding-right: 16px; }
+    .nav-link:hover { color: #ffb535!important; }
+    .dropdown-item:hover { color: #1f8dd6; }
+    #search-form-header { border-radius: 20px; background-color: #243140; border: 0; padding-left: 16px; color: #f0f0f0; }
+    #search-form-header:focus { box-shadow: none; background-color: #243140; color: #f0f0f0; }
+    .card-title > a { color: #1f8dd6; }
+    .card-title > a:hover { text-decoration: none; color: #ffb535; }
+    .widget-tags { display: inline-block; margin: 2px; }
+    .widget-tags > a { padding: 4px; background-color: #1f8dd6; color: #ffffff; border-radius: 4px; font-size: 12px; }
+    .widget-tags > a:hover { text-decoration: none; background-color: #ffb535; }
+    .buttons > li { list-style: none; float: right; margin-right: 20px; }
+    .buttons > li > i { color: #ccc; font-size: 13px; }
+    .tags { position: relative; }
+    .tags .toggle-tags { cursor: pointer; color: #555555; width: 15px; text-align: center; }
+    .tags .links { display: none; }
+    .tags .popover { -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+    .tags .popover .popover-content ul { width: 200px; margin: 0; padding: 0; list-style: none; }
+    .tags .popover .popover-content ul li { display: inline; }
+    .tags .popover .popover-content ul li::after { content: ', '; }
+    .tags .popover .popover-content ul li:last-child:after { content: ''; }
+    </style>
 </head>
 
 <body>
 
-  <!-- Header -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">L E X I T U D E S</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsToggle" aria-controls="navbarsToggle"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">L E X I T U D E S</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsToggle" aria-controls="navbarsToggle"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navbarsToggle">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/random">{lang:Random}</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/archive">{lang:Archive}</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdownTags" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categorias</a>
-            <div class="dropdown-menu" aria-labelledby="dropdownTags">
-              <a class="dropdown-item" href="#">Android</a>
-              <a class="dropdown-item" href="#">CSS</a>
-              <a class="dropdown-item" href="#">HTML</a>
-              <a class="dropdown-item" href="#">JavaScript</a>
-              <a class="dropdown-item" href="#">Java</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdownCursos" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cursos</a>
-            <div class="dropdown-menu" aria-labelledby="dropdownCursos">
-              <a class="dropdown-item" href="#">Fullstack Master</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Doações</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Glossário</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-md-0">
-          <input class="form-control" id="search-form-header" type="text" placeholder="Busca" aria-label="Busca">
-        </form>
-      </div>
+        <div class="collapse navbar-collapse" id="navbarsToggle">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/random">{lang:Random}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/archive">{lang:Archive}</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownTags" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categorias</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownTags">
+                        <a class="dropdown-item" href="#">Android</a>
+                        <a class="dropdown-item" href="#">CSS</a>
+                        <a class="dropdown-item" href="#">HTML</a>
+                        <a class="dropdown-item" href="#">JavaScript</a>
+                        <a class="dropdown-item" href="#">Java</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownCursos" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cursos</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownCursos">
+                        <a class="dropdown-item" href="#">Fullstack Master</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Doações</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Glossário</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-md-0">
+                <input class="form-control" id="search-form-header" type="text" placeholder="Busca" aria-label="Busca">
+            </form>
+        </div>
     </div>
-  </nav>
+</nav>
 
-  <!-- Page Content -->
-  <div class="container">
+<!-- Page Content -->
+<div class="container">
     <div class="row">
 
-      <!-- Blog entries column" -->
-      <div class="col-md-8">
-      
-        <!-- Blog Post -->
-        {block:Posts}
-        {block:Text}
-        <div class="card mb-4 my-4">
-          <div class="card-body">
-            {block:Title}<h2 class="card-title"><a href="{Permalink}">{Title}</a></h2>{/block:Title}
-            <p class="card-text">{Body}</p>
-          </div>
-          <div class="card-footer text-muted">
-            01/01/2018 por
-            <a href="#">Marcio Motta</a>
-          </div>
+        <!-- Blog entries column" -->
+        <div class="col-md-9">
+
+            <!-- Blog Post -->
+            {block:Posts}
+            {block:Text}
+            <div class="card mb-4 my-4">
+                <div class="card-body">
+                    {block:Title}<h2 class="card-title"><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+                    <p class="card-text">{Body}</p>
+                </div>
+                <div class="card-footer">
+                    <ul class="buttons">
+                    <!--
+                        <li class="postpopup" onclick="postRepostOf()"><i class="fas fa-globe"></i></li>
+                        <li><a href="{ReblogURL}" title="Reblog"><i class="fas fa-redo-alt"></i></a></li>
+                        <li class="postpopup" onclick="postShare()"><i class="fas fa-share-alt"></i></li>
+                        <li>{LikeButton color="grey" size="16"}</li>
+                    -->
+                        {block:HasTags}
+                        <li class="tags" onclick="tagsInit()">
+                            <i class="fas fa-tags toggle-tags" data-placement="top"></i>
+                            <div class="links">
+                                <ul class="list-unstyled mb-0">
+                                    {block:Tags}
+                                    <li><a href="{TagURL}">#{Tag}</a></li>
+                                    {/block:Tags}
+                                </ul>
+                            </div>
+                        </li>
+                        {/block:HasTags}
+                    </ul>
+                </div>
+            </div>
+            {/block:Text}
+            {/block:Posts}
+
         </div>
-        {/block:Text}
-        {/block:Posts}
 
-      </div>
+        <!-- Sidebar widgets column -->
+        <div class="col-md-3 my-4">
 
-      <!-- Sidebar widgets column -->
-      <div class="col-md-4 my-4">
+            <!-- Search widget -->
+            <div class="card">
+                <h5 class="card-header">Busca</h5>
+                <div class="card-body">
+                    <input type="text" class="form-control" placeholder="Buscar por...">
+                </div>
+            </div>
 
-        <!-- Search widget -->
-        <div class="card">
-          <h5 class="card-header">Busca</h5>
-          <div class="card-body">
-            <input type="text" class="form-control" placeholder="Buscar por...">
-          </div>
-        </div>
-
-                  <!-- Categories Widget -->
-                  <div class="card my-4">
-                      <h5 class="card-header">Tags</h5>
-                      <div class="card-body">
-                        <div class="row">
-                          <div class="col-lg-12">
+            <!-- Categories Widget -->
+            <div class="card my-4">
+                <h5 class="card-header">Tags</h5>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-12">
                             <ul class="list-unstyled mb-0">
-                              <li><a href="#">#101</a></li>
-                              <li><a href="#">#helloworld</a></li>
-                              <li><a href="#">#android</a></li>
-                              <li><a href="#">#css</a></li>
-                              <li><a href="#">#html</a></li>
-                              <li><a href="#">#javascript</a></li>
-                              <li><a href="#">#java</a></li>
+                                <li class="widget-tags"><a href="#">#101</a></li>
+                                <li class="widget-tags"><a href="#">#helloworld</a></li>
+                                <li class="widget-tags"><a href="#">#android</a></li>
+                                <li class="widget-tags"><a href="#">#css</a></li>
+                                <li class="widget-tags"><a href="#">#html</a></li>
+                                <li class="widget-tags"><a href="#">#javascript</a></li>
+                                <li class="widget-tags"><a href="#">#java</a></li>
+                                <li class="widget-tags"><a href="#">#jquery</a></li>
+                                <li class="widget-tags"><a href="#">#php</a></li>
+                                <li class="widget-tags"><a href="#">#tumbler-theme</a></li>
+                                <li class="widget-tags"><a href="#">#wordpress</a></li>
                             </ul>
-                          </div>
                         </div>
-                      </div>
                     </div>
+                </div>
+            </div>
 
-      </div>
+        </div>
 
     </div>
-  </div>
+</div>
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
+<!-- Optional JavaScript -->
+<script>
+    function tagsInit(){
+        $('.toggle-tags').popover({
+            html: true,
+            content: function(){
+                return $(this).siblings('.links').html();
+            }
+        });
+    }
+</script>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+crossorigin="anonymous"></script>
 </body>
 
 </html>
